@@ -7,30 +7,20 @@
       "targetPath": "dist",
       "formatPresets": [
         {
-          "package": "desktop",
+          "package": "main",
           "presets": [
             {
               "id": "main",
               "formats": [
                 {
-                  "bitrate": 127,
+                  "bitrate": 128,
                   "channels": 2,
                   "format": "webm"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "package": "mobile",
-          "presets": [
-            {
-              "id": "main",
-              "formats": [
+                },
                 {
-                  "bitrate": 96,
+                  "bitrate": 128,
                   "channels": 2,
-                  "format": "webm"
+                  "format": "mp4"
                 }
               ]
             }
@@ -38,6 +28,19 @@
         }
       ]
     },
+    "groups": [
+      {
+        "id": "music",
+        "format": "main",
+        "bus": "music",
+        "limit": 1
+      },
+      {
+        "id": "fx",
+        "format": "main",
+        "bus": "fx"
+      }
+    ],
     "sounds": [
       {
         "id": "music",
@@ -52,17 +55,14 @@
         "group": "fx"
       }
     ],
-    "groups": [
+    "buses": [
       {
         "id": "music",
-        "format": "main",
-        "bus": "master",
-        "limit": 1
+        "destination": "master"
       },
       {
         "id": "fx",
-        "format": "main",
-        "bus": "master"
+        "destination": "master"
       }
     ]
   },
@@ -266,6 +266,7 @@
   },
   "loadrConfig": {
     "logger": "console",
+    "packageToUse": "main",
     "soundData": [
       [
         "fx",

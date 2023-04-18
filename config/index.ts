@@ -4,19 +4,29 @@ const options: IEcasOptions = {
     settings: {
       sourcePaths: ['sounds'],
       targetPath: 'dist',
-      formatPresets: [
-        { package: 'desktop', presets: [ { id: 'main', formats: [{ bitrate: 127, channels: 2, format: 'webm' }]}]},
-        { package: 'mobile', presets: [ { id: 'main', formats: [{ bitrate: 96, channels: 2, format: 'webm' }]}]}
-      ]
+      formatPresets: [{
+        package: 'main',
+        presets: [{
+          id: 'main',
+          formats: [
+            { bitrate: 128, channels: 2, format: 'webm' },
+            { bitrate: 128, channels: 2, format: 'mp4' },
+          ]
+        }]
+      }]
     },
+    groups: [
+      { id: 'music', format: 'main', bus: 'music', limit: 1 },
+      { id: 'fx', format: 'main', bus: 'fx' }
+    ],
     sounds: [
       { id: 'music', group: 'music' },
       { id: 'fx', group: 'fx' },
       { id: 'impulse', group: 'fx' },
     ],
-    groups: [
-      { id: 'music', format: 'main', bus: 'master', limit: 1 },
-      { id: 'fx', format: 'main', bus: 'master' }
+    buses: [
+      { id: 'music', destination: 'master' },
+      { id: 'fx', destination: 'master' }
     ]
   },
   eventConfig: [
@@ -94,7 +104,8 @@ const options: IEcasOptions = {
     }
   },
   loadrConfig: {
-    logger: 'console'
+    logger: 'console',
+    packageToUse: 'main'
   }
 }
 
