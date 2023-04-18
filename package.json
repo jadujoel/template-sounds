@@ -1,0 +1,15 @@
+{
+  "name": "simple-integration",
+  "scripts": {
+    "serve": "serve dist",
+    "build": "ecas-encoder-cli --config=src/config.ts --outfile=dist/config.json --logger=console && rm -f dist/soundsData.json"
+  },
+  "devDependencies": {
+    "@netent-tech/ecas-encoder-cli": "2.1.2-9bd72a63f3bbce546b12877c99c18ccb887be558.0",
+    "@netent-tech/ecas-engine": "2.1.2",
+    "esbuild": "0.17.17",
+    "json": "11.0.0",
+    "serve": "14.2.0",
+    "typescript": "5.0.4"
+  }
+}
