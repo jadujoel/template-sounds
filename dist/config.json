@@ -13,7 +13,7 @@
               "id": "main",
               "formats": [
                 {
-                  "bitrate": 128,
+                  "bitrate": 127,
                   "channels": 2,
                   "format": "webm"
                 }

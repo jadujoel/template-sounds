@@ -1,11 +1,11 @@
-import { type IEcasOptions, EcasEvents,  } from '@netent-tech/ecas-engine'
+import { EcasEvents, type IEcasOptions, } from '@netent-tech/ecas-engine'
 const options: IEcasOptions = {
   soundConfig: {
     settings: {
       sourcePaths: ['sounds'],
       targetPath: 'dist',
       formatPresets: [
-        { package: 'desktop', presets: [ { id: 'main', formats: [{ bitrate: 128, channels: 2, format: 'webm' }]}]},
+        { package: 'desktop', presets: [ { id: 'main', formats: [{ bitrate: 127, channels: 2, format: 'webm' }]}]},
         { package: 'mobile', presets: [ { id: 'main', formats: [{ bitrate: 96, channels: 2, format: 'webm' }]}]}
       ]
     },
