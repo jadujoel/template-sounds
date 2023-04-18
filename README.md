@@ -1,6 +1,6 @@
 # Template Sounds
 Serves Template Sounds
-
+Sounds will be hosted at: https://jadujoel.github.io/template-sounds/
 To see end result open:  https://jadujoel.github.io/template-game/
 
 To edit with your own sounds:
@@ -16,10 +16,9 @@ In a separate terminal
 ```
 npm run watch
 ```
+open: https://jadujoel.github.io/template-game/?ecas-load-path=http:localhost:3000
 
-copy url the server gives you (http://localhost:3000 by default) and add after the ? below
-open: https://jadujoel.github.io/template-game/?my_url
-for example: https://jadujoel.github.io/template-game/?ecas-load-path=http:localhost:3000
+if the serve command gave you a different url (for example http:localhost:58791) then replace with that.
 
 Make changes to your config / sounds.
 Reload page to test them.
