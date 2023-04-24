@@ -1,14 +1,14 @@
 {
   "name": "template-sounds",
   "scripts": {
+    "clean": "rm -rf dist .ecas-encoder",
     "serve": "echo 'use the provided host url together with ?ecas-load-path=<URL>/' && serve dist --cors",
-    "build": "rm -rf dist && ecas-encoder-cli --config=config/index.ts --outfile=dist/config.json --logger=console --all=true && rm -f dist/soundsData.json",
-    "watch": "node watch.mjs"
+    "build": "ecas-encoder --config=config/index.ts --outfile=dist/config.json  --all=true --logger=console",
+    "watch": "ecas-encoder --config=config/index.ts --outfile=dist/config.json  --all=false --logger=none --watch=config,sounds,dist/main"
   },
   "devDependencies": {
-    "@netent-tech/ecas-encoder-cli": "2.1.2-9bd72a63f3bbce546b12877c99c18ccb887be558.0",
-    "@netent-tech/ecas-engine": "2.1.2",
-    "chokidar": "3.5.3",
+    "@netent-tech/ecas-engine": "2.1.3",
+    "@netent-tech/ecas-encoder": "2.1.4-6713df0b44f15b03a9b364e8099d2f83358482e7.0",
     "serve": "14.2.0",
     "typescript": "5.0.4"
   }
