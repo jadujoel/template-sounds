@@ -2,7 +2,8 @@
   "name": "template-sounds",
   "scripts": {
     "clean": "rm -rf dist .ecas-encoder",
-    "serve": "echo 'use the provided host url together with ?ecas-load-path=<URL>/' && serve dist --cors",
+    "serve": "node info.js && serve dist --cors",
+    "dev": "npm run watch & npm run serve",
     "build": "ecas-encoder --config=config/index.ts --outfile=dist/config.json  --all=true --logger=console",
     "watch": "ecas-encoder --config=config/index.ts --outfile=dist/config.json  --all=false --logger=none --watch=config,sounds,dist/main"
   },
