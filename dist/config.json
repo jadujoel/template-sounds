@@ -267,6 +267,19 @@
   "loadrConfig": {
     "logger": "console",
     "packageToUse": "main",
-    "soundData": []
+    "soundData": [
+      [
+        "fx",
+        1.52542
+      ],
+      [
+        "impulse",
+        3.500021
+      ],
+      [
+        "music",
+        24
+      ]
+    ]
   }
 }
