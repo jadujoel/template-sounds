@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@netent-tech/ecas-engine": "2.1.3",
-    "@netent-tech/ecas-encoder": "2.1.4-6713df0b44f15b03a9b364e8099d2f83358482e7.0",
+    "@netent-tech/ecas-encoder": "2.1.4-c96139ddc361c3b8f24863dbba99ea6c24c53587.0",
     "serve": "14.2.0",
     "typescript": "5.0.4"
   }
