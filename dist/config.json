@@ -13,12 +13,12 @@
               "id": "main",
               "formats": [
                 {
-                  "bitrate": 128,
+                  "bitrate": 112,
                   "channels": 2,
                   "format": "webm"
                 },
                 {
-                  "bitrate": 128,
+                  "bitrate": 112,
                   "channels": 2,
                   "format": "mp4"
                 }

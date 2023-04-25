@@ -9,8 +9,8 @@ const options: IEcasOptions = {
         presets: [{
           id: 'main',
           formats: [
-            { bitrate: 128, channels: 2, format: 'webm' },
-            { bitrate: 128, channels: 2, format: 'mp4' },
+            { bitrate: 112, channels: 2, format: 'webm' },
+            { bitrate: 112, channels: 2, format: 'mp4' },
           ]
         }]
       }]
