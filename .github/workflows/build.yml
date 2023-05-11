@@ -36,7 +36,10 @@ jobs:
         uses: actions/setup-node@v2.5.0
         with:
           node-version: 16.11.1
-          
+
+      - name: Build
+        run: npm run action:build
+
       - name: Setup Pages
         uses: actions/configure-pages@v2.1.1
 
