@@ -3,7 +3,19 @@ Serves Template Sounds
 Sounds will be hosted at: https://jadujoel.github.io/template-sounds/
 To see end result open:  https://jadujoel.github.io/template-game/
 
-To edit with your own sounds:
+## If You're on github codespaces
+```bash
+npm run codespace
+```
+click the localhost url
+```
+npm run codespace:proxy
+```
+open https://jadujoel.github.io/template-game/?ecas-load-path=<path_that_appeared_when_clicking_localhost_url>
+
+---
+
+### To edit with your own sounds:
 First you'll need acces to @netent-tech organization on github.
 Then you need to create token and edit your .npmrc file to be able to access the artifactory locally.
 
