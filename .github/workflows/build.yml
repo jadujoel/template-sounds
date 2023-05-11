@@ -38,9 +38,7 @@ jobs:
           node-version: 16.11.1
 
       - name: Install
-        run: npm config set //npm.pkg.github.com/:_authToken $NPM_PKG_GITHUB_COM |
-          npm config set @netent-tech:registry https://npm.pkg.github.com |
-          npm install
+        run: npm config set //npm.pkg.github.com/:_authToken $NPM_PKG_GITHUB_COM && npm config set @netent-tech:registry https://npm.pkg.github.com && npm install
 
       - name: Build
         run: npm run build
