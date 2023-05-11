@@ -4,14 +4,22 @@ Sounds will be hosted at: https://jadujoel.github.io/template-sounds/
 To see end result open:  https://jadujoel.github.io/template-game/
 
 ## If You're on github codespaces
+setup the codespace, install dependencies, and start watching the sounds / config for changes.
 ```bash
 npm run codespace
 ```
-click the localhost url
+in a separate terminal:
+```bash
+# serve the generated sounds / config
+npm run serve
 ```
+click the localhost url
+open https://jadujoel.github.io/template-game/?ecas-load-path=<path_that_appeared_when_clicking_localhost_url>
+in a third terminal:
+```bash
+# forward the codespace server to be public so that template-game can access
 npm run codespace:proxy
 ```
-open https://jadujoel.github.io/template-game/?ecas-load-path=<path_that_appeared_when_clicking_localhost_url>
 
 ---
 
