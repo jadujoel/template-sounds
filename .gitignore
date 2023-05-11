@@ -1,4 +1,5 @@
 .ecas-encoder
+dist
 package-lock.json
 # Logs
 logs

@@ -3,46 +3,45 @@ Serves Template Sounds
 Sounds will be hosted at: https://jadujoel.github.io/template-sounds/
 To see end result open:  https://jadujoel.github.io/template-game/
 
-## If You're on github codespaces
-setup the codespace, install dependencies, and start watching the sounds / config for changes.
+## Using Github Codespaces
+Ask for Collaborator access.
+Then click ```https://codespaces.new/jadujoel/template-sounds```
+After the codespace has started, in the terminal, run:
 ```bash
-npm run codespace
+npm run dev
 ```
-in a separate terminal:
-```bash
-# serve the generated sounds / config
-npm run serve
-```
-click the localhost url
-open https://jadujoel.github.io/template-game/?ecas-load-path=<path_that_appeared_when_clicking_localhost_url>
-in a third terminal:
+Then click the provided url.
+And run this command in the terminal:
 ```bash
 # forward the codespace server to be public so that template-game can access
-npm run codespace:proxy
+npm run proxy
 ```
+Reload the game in the tab you opened previously, it should now be loading your config/index.ts.
 
+When you are done, commit and push.
+The github action will build and deploy your latest config / sounds to the be accessible at https://jadujoel.github.io/template-game/
 ---
 
-### To edit with your own sounds:
+## Using Local Machine
 First you'll need acces to @netent-tech organization on github.
 Then you need to create token and edit your .npmrc file to be able to access the artifactory locally.
 
 Then:
 ```
 npm install
-npm run serve
+npm run dev
 ```
-In a separate terminal
-```
-npm run watch
-```
-open: https://jadujoel.github.io/template-game/?ecas-load-path=http:localhost:3000
-
-if the serve command gave you a different url (for example http:localhost:58791) then replace with that.
-
 Make changes to your config / sounds.
 Reload page to test them.
 
 When you're happy.
 Git commit and push.
-The changes will become available publicly after a minute or so.
+The changes will become available at https://jadujoel.github.io/template-game/ after minute or so without needing to use the load-path in the url..
+
+To kill the server / ecas-encoder watcher that is running in the background.
+```
+npm run kill
+```
+
+## Info
+Logs from server and watch command is stored to .serve.log and .watch.log repectively.
