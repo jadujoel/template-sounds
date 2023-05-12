@@ -37,8 +37,13 @@ const options: IEcasOptions = {
         { type: 'busAddConvolverReverb', args: [ { busId: 'master', id: 'reverb', impulseResponse: 'impulse', mix: 0 } ] }
       ]
     },
-    { id: 'start', actions: [ { type: 'playSound', args: ['music'], } ] },
-    { id: 'spin', actions: [ { type: 'playSound', args: ['fx'] }, ] },
+    {
+      id: 'start', actions: [
+        { type: 'playSound', args: ['music', { pitch: 0, volume: 0.2, loop: true }], },
+        { type: 'playSound', args: ['fx', { pitch: -1200, volume: 0.2 }], }
+      ]
+    },
+    { id: 'spin', actions: [ { type: 'playSound', args: ['fx', { }] }, ] },
     {
       id: 'inactive',
       actions: [{

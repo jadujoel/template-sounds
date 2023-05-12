@@ -2,7 +2,7 @@
   "name": "template-sounds",
   "scripts": {
     "postinstall": "chmod +x ./scripts/*.sh",
-    "dev": "./scripts/serve.sh && ./scripts/watch.sh && ./scripts/info.sh",
+    "dev": "./scripts/serve.sh && ./scripts/info.sh && node watch.mjs",
     "proxy": "./scripts/proxy.sh",
     "clean": "rm -rf dist .ecas-encoder .serve.log .watch.log && ./scripts/kill.sh",
     "build": "ecas-encoder --config=config/index.ts --outfile=dist/config.json --writeSoundsDataFile=false"
